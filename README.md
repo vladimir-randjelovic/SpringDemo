@@ -2,7 +2,7 @@
 SpringDemo aplikacija napravljena je sa ciljem da, na jednostavan način, prikaže osnove Spring framework-a, izrade REST servisa i premenu JPA specifikacije za pristup MySQL bazi podataka.  Za razvoj aplikacije korišćene su SpringBoot biblioteke koje dozvoljavaju brz i jednostavan razvoj, kao i primenu ugrađenog TomCat servera. Imajući u vidu da je aplikacija urađena uz pomoć Maven build tool-a, pregled aplikacije, kao i njenu izmenu moguće je vršiti uz pomoć NetBeans razvojnog okruženja. Za testiranje je neophodno koristiti neki od REST klijenata (npr. Postman).
 Aplikacija sa može klonirati sa GitHub lokacije: https://github.com/vladimir-randjelovic/SpringDemo.git
 ## Razvoj aplikacije
-Kako bi se na jednostavan način upoznali sa aplikacijom, potrebno je prvo klonirati repozitorijum sa prethodno navedene Git adrese, posle čega je pogodno koristiti neki od Git klijenata kako bi, na jednostavan način, mogli da izvršimo check out sa jednog commit-a na drugi.
+Kako bi se na jednostavan način upoznali sa aplikacijom, potrebno je prvo klonirati repozitorijum sa prethodno navedene Git adrese, posle čega je pogodno koristiti neki od Git klijenata izvršili check out sa jednog commit-a na drugi.
 ### Commit 1
 Prvi commit na repozitorijumu koristi samo dve klase koje su dovoljne za pokretanje Spring projekta sa jednim REST handler-om :
 1.	Application.java
