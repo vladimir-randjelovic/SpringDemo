@@ -1,5 +1,6 @@
-package hello;
+package application.entities;
 
+import application.entities.Car;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.util.List;

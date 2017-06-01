@@ -1,4 +1,4 @@
-package hello;
+package application.controllers;
 
 import java.util.List;
 import org.springframework.http.HttpStatus;
