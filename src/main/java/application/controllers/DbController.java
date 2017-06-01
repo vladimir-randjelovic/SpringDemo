@@ -87,4 +87,28 @@ public class DbController {
         UserAccount user = em.find(UserAccount.class, id);
         return users;
     }
+    
+    @GetMapping(path = "/getCarByType")
+    public @ResponseBody Object getCarByType(@RequestParam String type) {
+        List<Car> cars = carRepository.findByType(type);
+        return cars;
+    }
+    
+    @GetMapping(path = "/getCarByPower")
+    public @ResponseBody Object getCarByPower(@RequestParam Integer power) {
+        List<Car> cars = carRepository.findByPower(power);
+        return cars;
+    }
+    
+    @GetMapping(path = "/getUserByName")
+    public @ResponseBody Object getUserByName(@RequestParam String name) {
+        List<UserAccount> users = userRepository.findByName(name);
+        return users;
+    }
+    
+    @GetMapping(path = "/getUserByEmail")
+    public @ResponseBody Object getUserByEmail(@RequestParam String email) {
+        List<UserAccount> users = userRepository.findByEmail(email);
+        return users;
+    }
 }
