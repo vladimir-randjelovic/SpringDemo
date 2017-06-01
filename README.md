@@ -3,13 +3,13 @@ SpringDemo aplikacija napravljena je sa ciljem da, na jednostavan način, prika�
 Aplikacija sa može klonirati sa GitHub lokacije: https://github.com/vladimir-randjelovic/SpringDemo.git
 ## Razvoj aplikacije
 Kako bi se na jednostavan način upoznali sa aplikacijom, potrebno je prvo klonirati repozitorijum sa prethodno navedene Git adrese, posle čega je pogodno koristiti neki od Git klijenata izvršili check out sa jednog commit-a na drugi.
-### Commit 1
+### Initial commit
 Prvi commit na repozitorijumu koristi samo dve klase koje su dovoljne za pokretanje Spring projekta sa jednim REST handler-om :
 1.	Application.java
 Klasa koja se koristi za pokretanje Spring aplikacije
 2.	HelloController.java 
 Najjednostavniji REST controller koji vraća string "Hello world" kada iz REST klijenta stigne GET request na adresu localhost:8093/
-### Commit 2
+### REST handlers with GET and POST methods, path variable, request param…
 Drugi commit dopunjen je sa još dve metode. Prva metoda getMethod() prikazuje obradu GET zahteva sa adresom /rest/test
 ```
     @RequestMapping(value = "/test", method = RequestMethod.GET)
@@ -24,7 +24,7 @@ Druga methoda obrađuje POST zahtev sa adresom /rest/test
         return new ResponseEntity<>("/test POST method response. ID: "+id+"      Body: "+body, HttpStatus.OK);
     }
 ```	
-### Commit3
+### JPA database access. Entity classes, JSON annotations, OneToMany example
 Treći commit odnosi se na primenu JPA specifikacije za pristup MySQL bazi. Iz ovog razloga napravljene su dve entity klase UserAccount.java i Car.java, dva repository interface-a UserRepository.java i CarRepository.java, kao i REST controller DbController.java koji se koristi za funkcije upisa i čitanje baze podataka.
 Za pristup bazi koristi se sledeća konfiguracija:
 ```
@@ -33,8 +33,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/db_example
 spring.datasource.username=root
 spring.datasource.password=root
 ```
-### Commit 4
+### Packaging changed
 Četvrti commit vrši reorganizaciju klasa po paketima kako bi odvojio entity klase, kontrolere i repozitorijum interfejse.
-### Commit 5
+### Query methods added to repository interfaces
 Peti commit dodaje query metode repository interfejsima.
 
